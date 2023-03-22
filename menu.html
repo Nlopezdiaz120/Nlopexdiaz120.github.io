@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menú Cooperativa Conalep</title>
+</head>
+<body>
+
+<h1>Bienvenido {{ name }} del grupo {{ group }}</h1>
+
+<h2>Menú:</h2>
+
+{% for item in menu_items %}
+<form action="/order_confirmation" method="post">
+<input type="hidden" id="item" name="item" value="{{ item[0] }}">
+<input type="hidden" id="price" name="price" value="{{ item[1] }}">
+{{ item[0] }} - ${{ item[1] }}<input type="submit" value="Ordenar"><br><br>
+</form> 
+{% endfor %}
+
+</body>
+</html>

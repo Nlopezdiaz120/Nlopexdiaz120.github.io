@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Confirmación de orden</title>
+</head>
+<body>
+
+<h1>Confirmación de orden:</h1>
+
+<p>Has ordenado: {{ item }}</p>
+
+<p>Precio: ${{ price }}</p>
+
+<p>Se ha generado un código QR con los detalles de tu orden. Puedes usarlo para recoger tu compra y pagar sin hacer fila.</p>
+
+<img src="/static/qr_code.png">
+
+</body>
+</html>
